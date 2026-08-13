@@ -1,0 +1,8 @@
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, sans-serif; display: grid; min-height: 100vh; place-items: center; }
+main { max-width: 40rem; padding: 2rem; }
+h1 { font-size: 2rem; margin: 0 0 .5rem; }
+.ok { color: #16a34a; }
+a { color: #2567ff; }
+code { background: color-mix(in oklab, currentColor 12%, transparent); padding: .1em .35em; border-radius: .3em; }

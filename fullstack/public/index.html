@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ngris • full-stack test</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <h1>ngris full-stack test</h1>
+    <p>This page is <strong>static</strong>, served from the ngris edge. The button calls
+       <code>/api/hello</code>, which reverse-proxies to the backend pod running in-cluster.</p>
+    <button id="btn">Call /api/hello</button>
+    <pre id="out">(not called yet)</pre>
+  </main>
+  <script>
+    document.getElementById('btn').addEventListener('click', async () => {
+      const out = document.getElementById('out');
+      out.textContent = 'loading…';
+      try {
+        const r = await fetch('/api/hello');
+        out.textContent = 'HTTP ' + r.status + '\n' + JSON.stringify(await r.json(), null, 2);
+      } catch (e) { out.textContent = 'error: ' + e; }
+    });
+  </script>
+</body>
+</html>

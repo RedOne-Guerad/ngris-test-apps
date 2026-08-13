@@ -1,0 +1,7 @@
+:root { color-scheme: light dark; }
+body { margin: 0; font: 16px/1.6 system-ui, sans-serif; display: grid; min-height: 100vh; place-items: center; }
+main { max-width: 44rem; padding: 2rem; }
+h1 { font-size: 2rem; margin: 0 0 .5rem; }
+button { font: inherit; padding: .5rem 1rem; border: 0; border-radius: .5rem; background: #2567ff; color: #fff; cursor: pointer; }
+pre { background: color-mix(in oklab, currentColor 10%, transparent); padding: 1rem; border-radius: .5rem; overflow: auto; }
+code { background: color-mix(in oklab, currentColor 12%, transparent); padding: .1em .35em; border-radius: .3em; }
