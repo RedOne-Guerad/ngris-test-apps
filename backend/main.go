@@ -22,7 +22,7 @@ func main() {
 		writeJSON(w, map[string]string{"method": r.Method, "path": r.URL.Path, "host": r.Host})
 	})
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprint(w, "ngris backend test running in-cluster. Try /api/health or /api/echo\n")
+		fmt.Fprint(w, "ngris backend test v2 running in-cluster. Try /api/health or /api/echo\n")
 	})
 
 	port := os.Getenv("PORT")
